@@ -1,0 +1,25 @@
+<html>
+    <head>
+      <title>XSS Reflected</title>
+    </head>
+   <body><link rel='stylesheet' property='stylesheet' id='s' type='text/css' href="/static/styles/css/ss.css" media='all' />
+           <h1>XSS Reflected</h1>
+	
+<hr/>
+	<span style="text-align: right; float:right;"> User : {user}</span><br/>
+	<b>Write a note and share it </b><br/><br/>        <form action="" method="POST" >
+		<br/>
+	        <div>
+	            Message:<br/>
+	            <textarea name="message" rows="3" cols="50"></textarea>
+	        </div>
+	        <div>
+	            <input type="submit" value="send" />
+	        </div>
+        </form><br/><br/>
+        <div>
+	        <div>Notes :</div><br/>
+		{mssgs}
+        </div>
+    </body>
+</html>

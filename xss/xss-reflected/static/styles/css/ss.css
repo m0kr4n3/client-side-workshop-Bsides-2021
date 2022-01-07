@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(http://themes.googleusercontent.com/static/fonts/ptsans/v6/LKf8nhXsWg5ybwEGXk8UBQ.woff) format('woff');
+}    
+
+*, html, body, table, tr, td, frame { margin: 0; padding: 0;}
+html, body { height: 100%;}
+
+body {
+    
+    font-family: "Open Sans",sans-serif, Arial;
+    font-size: 13px;
+    line-height: 1.42857;
+    color: #767676;
+    background: #edecec;
+    
+    height: 100%;
+    position: relative;
+    padding: 82px 40px 0 40px !important;
+}
+
+
+a {  color: #2ba6cb; text-decoration: none;}
+a:hover{  cursor: pointer;}
+a:hover, a:focus{  color: #258faf;}
+
+
+#iframe {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    height: 64px; 
+    margin: 0;
+    padding:0;
+    border: none;
+    overflow:hidden;
+}
+
+fieldset {
+    padding: 5px 10px;
+}
+fieldset legend {
+    padding: 0 5px;
+}
+

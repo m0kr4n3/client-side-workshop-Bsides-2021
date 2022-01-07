@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/css/stylesheet.css') }}">
+    <title>PWNY RACING</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/">Home</a></li>
+            <li role="presentation" class="active"><a href="/admin">admin</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Hello admin </h3>
+      </div>
+
+      <div class="jumbotron">
+        <p class="lead">Congratulations! Here is your second flag: 
+      shellmates{AdM1n_I5_C0MING_HOM3}</p>
+      
+      <h3></h3>
+  <label for="name">admin calculator  </label>
+  <br>
+    <form  method="post">
+    <input type="text" id="op" name="op" >
+  </form>
+    {% if result %}
+    <p> The result is : {{ res }}</p>
+    {% endif %}
+    
+    {% if err %}
+    <p> {{error}}</p>
+    {% endif %}
+
+    </div>
+      <footer class="footer">
+        <p>&copy; Shellmates 2021</p>
+      </footer>
+    </div>
+  
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/css/stylesheet.css') }}">
+    <title>XSS reflected</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+          </ul>
+        </nav>
+        <h3 class="text-muted"> Welcome {{name}} </h3>
+      </div>
+    </div>
+
+
+  </body>
+</html>
