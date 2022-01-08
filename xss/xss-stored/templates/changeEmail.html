@@ -12,13 +12,11 @@
 </head>
 <body>
 <div class="container">
-    <form action="login" method="post" name="Login_Form" class="form-signin">
-        <h2 class="form-signin-heading">Please sign in</h2>
+    <form action="changeEmail" method="post" name="changeEmail_Form" class="form-signin">
+        <h2 class="form-signin-heading">Change your mail</h2>
         <label for="inputUsername" class="sr-only">Email</label>
-        <input name="Email" type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input name="Password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <button name="Submit" value="Login" class="btn btn-lg btn-primary btn-block" type="submit">Sign in / Register</button>
+        <input name="newEmail" type="email" id="inputEmail" class="form-control" placeholder="newEmail" required autofocus>
+        <button name="Submit" value="Login" class="btn btn-lg btn-primary btn-block" type="submit">Change </button>
                 {% if error %}
                 <div class="alert alert-danger alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -28,7 +26,7 @@
                 {% if sucess %}
                 <div class="alert alert-success alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    successfully registered
+                    email successfully changed
                 </div>
                 {% endif %}
 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Notes APP</title>
+	  <link rel='stylesheet' property='stylesheet' id='s' type='text/css' href="/static/styles/css/home.css" media='all' />
+	  
+    </head>
+   <body>
+   <div>
+           <h1 class="">Notes APP</h1>
+		   <button onclick="location.href = '/changeEmail';" class="myButton" >Change Email</button>
+	
+<hr/>
+	<span style="text-align: right; float:right;"> Your email : {email}</span><br/>
+	<b>Write a note and share it </b><br/><br/>        <form action="" method="POST" >
+		<br/>
+	        <div>
+	            Message:<br/>
+	            <textarea name="message" rows="3" cols="50"></textarea>
+	        </div>
+	        <div>
+	            <input type="submit" value="send" />
+	        </div>
+        </form><br/><br/>
+        <div>
+	        <div>Notes :</div><br/>
+		{mssgs}
+        </div>
+	</div>
+    </body>
+</html>
