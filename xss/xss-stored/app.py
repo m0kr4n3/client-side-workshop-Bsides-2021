@@ -72,14 +72,13 @@ def login():
 @cross_origin()
 def changeEmail():
     cookie = request.cookies.get('session')
-    print(cookie);input()
     if cookie == None :
         return redirect('/')
     creds = json.loads(b64.b64decode(cookie))
     if "Email" in creds and creds['Email'] in users and "Password" in creds  and users[creds["Email"]] == creds["Password"]   :   
         if request.method == 'GET' :
             return render_template('changeEmail.html')
-        elif request.method == "POST":
+        elif request.method == "POST":  
             data = request.form
             if data['newEmail'] in users :
                 return render_template('changeEmail.html',error=True,content="Email already exists")
