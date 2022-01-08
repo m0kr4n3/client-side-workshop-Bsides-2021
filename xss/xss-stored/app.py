@@ -2,8 +2,12 @@
 from flask import Flask, redirect, request, render_template, make_response
 import base64 as b64
 import json
+from flask_cors import CORS, cross_origin
+
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['Access-Control-Allow-Origin'] = '*'
 
 users = {"admin@gmail.com":"superSecret"}
 notes = []
@@ -63,9 +67,12 @@ def login():
 
     return render_template('login.html')
 
+
 @app.route("/changeEmail",methods=["GET","POST"])
+@cross_origin()
 def changeEmail():
     cookie = request.cookies.get('session')
+    print(cookie);input()
     if cookie == None :
         return redirect('/')
     creds = json.loads(b64.b64decode(cookie))
@@ -92,3 +99,7 @@ def changeEmail():
         return redirect('/')
     
     
+
+
+if __name__ == '__main__':
+    app.run()
